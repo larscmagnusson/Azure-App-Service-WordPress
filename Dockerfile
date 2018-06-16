@@ -119,8 +119,6 @@ WORKDIR /var/www/html
 ## Put your code in the image, for example with git clone... ###
 #RUN git clone -b master [REPLACE WITH YOUR GIT REPOSITORY CLONE URL] .
 
-RUN echo "<?php phpinfo();" > info.php
-
 # Add directories typically not included in the git repository
 # These are mounted from /home
 
@@ -141,5 +139,7 @@ WORKDIR /var/www/html/docroot
 RUN chown -R root:www-data .
 RUN find . -type d -exec chmod u=rwx,g=rx,o= '{}' \;
 RUN find . -type f -exec chmod u=rw,g=r,o= '{}' \;
+
+RUN echo "<?php phpinfo();" > info.php
 
 ENTRYPOINT ["/bin/init_container.sh"]
