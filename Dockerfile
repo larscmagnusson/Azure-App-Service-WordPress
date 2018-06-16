@@ -4,7 +4,7 @@ MAINTAINER snp-technologies
 COPY apache2.conf /bin/
 COPY init_container.sh /bin/
 
-RUN a2enmod rewrite expires include deflate
+RUN a2enmod rewrite expires include deflate autoindex
 
 # install the PHP extensions we need
 RUN apt-get update \
