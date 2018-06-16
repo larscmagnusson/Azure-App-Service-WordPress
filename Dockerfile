@@ -124,18 +124,18 @@ RUN echo "<?php phpinfo();" > info.php
 # Add directories typically not included in the git repository
 # These are mounted from /home
 
-RUN mkdir -p  /home/site/wwwroot/wp-content/uploads/ \
-    && ln -s /home/site/wwwroot/wp-content/uploads  /var/www/html/docroot/wp-content/uploads \
-    && mkdir -p  /home/site/wwwroot/wp-content/backup-db/ \
-    && ln -s /home/site/wwwroot/wp-content/backup-db  /var/www/html/docroot/wp-content/backup-db \
-    && mkdir -p  /home/site/wwwroot/wp-content/backups/ \
-    && ln -s /home/site/wwwroot/wp-content/backups  /var/www/html/docroot/wp-content/backups \
-    && mkdir -p  /home/site/wwwroot/wp-content/blogs.dir/ \
-    && ln -s /home/site/wwwroot/wp-content/blogs.dir  /var/www/html/docroot/wp-content/blogs.dir \
-    && mkdir -p  /home/site/wwwroot/wp-content/cache/ \
-    && ln -s /home/site/wwwroot/wp-content/cache  /var/www/html/docroot/wp-content/cache \    
-    && mkdir -p  /home/site/wwwroot/wp-content/upgrade/ \
-    && ln -s /home/site/wwwroot/wp-content/upgrade  /var/www/html/docroot/wp-content/upgrade
+#RUN mkdir -p  /home/site/wwwroot/wp-content/uploads/ \
+#    && ln -s /home/site/wwwroot/wp-content/uploads  /var/www/html/docroot/wp-content/uploads \
+#    && mkdir -p  /home/site/wwwroot/wp-content/backup-db/ \
+#    && ln -s /home/site/wwwroot/wp-content/backup-db  /var/www/html/docroot/wp-content/backup-db \
+#    && mkdir -p  /home/site/wwwroot/wp-content/backups/ \
+#    && ln -s /home/site/wwwroot/wp-content/backups  /var/www/html/docroot/wp-content/backups \
+#    && mkdir -p  /home/site/wwwroot/wp-content/blogs.dir/ \
+#    && ln -s /home/site/wwwroot/wp-content/blogs.dir  /var/www/html/docroot/wp-content/blogs.dir \
+#    && mkdir -p  /home/site/wwwroot/wp-content/cache/ \
+#    && ln -s /home/site/wwwroot/wp-content/cache  /var/www/html/docroot/wp-content/cache \    
+#    && mkdir -p  /home/site/wwwroot/wp-content/upgrade/ \
+#    && ln -s /home/site/wwwroot/wp-content/upgrade  /var/www/html/docroot/wp-content/upgrade
     
 WORKDIR /var/www/html/docroot
 RUN chown -R root:www-data .
