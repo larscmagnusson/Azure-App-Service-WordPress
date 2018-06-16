@@ -117,7 +117,9 @@ ENV PATH ${PATH}:/var/www/html/
 
 WORKDIR /var/www/html
 ## Put your code in the image, for example with git clone... ###
-RUN git clone -b master [REPLACE WITH YOUR GIT REPOSITORY CLONE URL] .
+#RUN git clone -b master [REPLACE WITH YOUR GIT REPOSITORY CLONE URL] .
+
+RUN echo "<?php phpinfo();" > info.php
 
 # Add directories typically not included in the git repository
 # These are mounted from /home
