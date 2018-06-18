@@ -1,5 +1,6 @@
 FROM php:7.2.1-apache
-
+ 
+# nä
 MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 COPY apache2.conf /bin/
