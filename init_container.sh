@@ -7,10 +7,8 @@ cat >/etc/motd <<EOL
 \____|__  /_____ \____/ |__|    \___  >
         \/      \/                  \/ 
 A P P   S E R V I C E   O N   L I N U X
-
 Documentation: http://aka.ms/webapp-linux
 PHP quickstart: https://aka.ms/php-qs
-
 EOL
 cat /etc/motd
 
